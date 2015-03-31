@@ -28,6 +28,8 @@ class AttendeeForm(forms.ModelForm):
             'invoice',
             'company_name',
             'company_address',
+            'company_post_code',
+            'company_city',
             'company_nip',
             'accept_terms_of_service',
         )
@@ -37,6 +39,12 @@ class AttendeeForm(forms.ModelForm):
 
     def clean_company_address(self):
         return self._clean_company_field('company_address')
+
+    def clean_company_post_code(self):
+        return self._clean_company_field('company_post_code')
+
+    def clean_company_city(self):
+        return self._clean_company_field('company_city')
 
     def clean_company_nip(self):
         return self._clean_company_field('company_nip')
