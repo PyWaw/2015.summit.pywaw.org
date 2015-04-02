@@ -19,3 +19,4 @@ DATABASES = {
 
 EMAIL_BACKEND = 'djrill.mail.backends.djrill.DjrillBackend'
 MANDRILL_API_KEY = get_env_var('MANDRILL_API_KEY')
+REGISTRATION_NOTIFICATIONS_URL = get_env_var('REGISTRATION_NOTIFICATIONS_URL', default=None)

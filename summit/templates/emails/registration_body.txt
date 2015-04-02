@@ -6,6 +6,11 @@ Thank you for registration at PyWaw Summit conference! Please make a transfer to
 - currency: EUR, price: 85, bank account: 77 1090 2851 0000 0001 2240 0891
 - currency: USD, price: 95, bank account: 27 1090 2851 0000 0001 2240 0918
 
+Transfer details:
+To: MCE-MeetLab Sp. z o.o.
+Address: ul. Osowska 23/6, 04-302 Warszawa
+Title: {{ attendee.name }}
+
 You could check your payment status on: http://{{ site }}{{ attendee.get_absolute_url }}
 
 Best regards,
