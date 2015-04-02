@@ -1,6 +1,9 @@
+import hashlib
 from django.core.urlresolvers import reverse
 from django.db import models
 import uuid
+from django.db.models.signals import pre_save
+import requests
 
 
 def create_attendee_hash():
@@ -8,6 +11,15 @@ def create_attendee_hash():
         attendee_hash = uuid.uuid1().hex
         if not Attendee.objects.filter(hash=attendee_hash).exists():
             return attendee_hash
+
+
+def set_avatar(sender, instance, **kwargs):
+    gravatar_url = "http://www.gravatar.com/avatar/" + hashlib.md5(instance.email.lower().encode('utf-8')).hexdigest()
+    response = requests.get(gravatar_url, params={'d': 404})
+    if response.ok:
+        instance.avatar = gravatar_url
+    else:
+        instance.avatar = ''
 
 
 class Attendee(models.Model):
@@ -30,9 +42,13 @@ class Attendee(models.Model):
     invoice_sent = models.BooleanField(default=False)
     registration_date = models.DateTimeField(auto_now_add=True)
     hash = models.CharField(max_length=32, default=create_attendee_hash)
+    avatar = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
         return reverse('attendee_detail', kwargs={'hash': self.hash})
+
+
+pre_save.connect(set_avatar, sender=Attendee)

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="attendees-container">
+  <h2 class="attendees__title">Attendees</h2>
+  <div class="attendees">
+    <ul class="attendees__grid">
+    {% for attendee in attendees_with_avatar %}
+      <li>
+        {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}">{% endif %}
+        <img src="{{ attendee.avatar }}?s=150" alt="{{ attendee.name }} ({{ attendee.tagline }})">
+        {% if attendee.twitter %}</a>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+
+    <h3>.. and more without avatar!</h3>
+    <ul>
+    {% for attendee in attendees_textual %}
+      <li>
+        {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}">{% endif %}
+        {{ attendee.name }} ({{ attendee.tagline }})
+        {% if attendee.twitter %}</a>{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

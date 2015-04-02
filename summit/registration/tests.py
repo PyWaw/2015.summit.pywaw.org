@@ -1,6 +1,7 @@
 from django.test import TestCase
 from djet.assertions import EmailAssertionsMixin, StatusCodeAssertionsMixin
 from djet.testcases import ViewTestCase
+from model_mommy import mommy
 from . import views, models, forms
 
 
@@ -18,6 +19,8 @@ class AttendeeCreateViewTest(ViewTestCase, EmailAssertionsMixin, StatusCodeAsser
             'display_on_website': True,
             'invoice': True,
             'company_name': 'The Beatles',
+            'company_city': 'London',
+            'company_post_code': 'WB12',
             'company_address': 'Main St, London, UK',
             'company_nip': '123123123',
             'accept_terms_of_service': True,
@@ -71,3 +74,42 @@ class AttendeeFormTest(TestCase):
 
         self.assertTrue(is_valid)
 
+
+class AttendeesListTestCase(ViewTestCase):
+    view_class = views.AttendeesListView
+
+    def test_do_not_display_unpaid_attendee(self):
+        unpaid_attendee = mommy.make(models.Attendee, display_on_website=True, is_paid=False)
+        request = self.factory.get()
+
+        response = self.view(request)
+
+        self.assertNotIn(unpaid_attendee, response.context_data['attendees_with_avatar'])
+        self.assertNotIn(unpaid_attendee, response.context_data['attendees_textual'])
+
+    def test_do_not_display_unwilling_attendee(self):
+        unwilling_attende = mommy.make(models.Attendee, display_on_website=False, is_paid=True)
+        request = self.factory.get()
+
+        response = self.view(request)
+
+        self.assertNotIn(unwilling_attende, response.context_data['attendees_with_avatar'])
+        self.assertNotIn(unwilling_attende, response.context_data['attendees_textual'])
+
+    def test_working_gravatar(self):
+        attendee = mommy.make(models.Attendee, email='jasisz@gmail.com', display_on_website=True, is_paid=True)
+        request = self.factory.get()
+
+        response = self.view(request)
+
+        self.assertIn(attendee, response.context_data['attendees_with_avatar'])
+        self.assertNotIn(attendee, response.context_data['attendees_textual'])
+
+    def test_not_working_gravatar(self):
+        attendee = mommy.make(models.Attendee, email='masliczenko@pocztonka.pl', display_on_website=True, is_paid=True)
+        request = self.factory.get()
+
+        response = self.view(request)
+
+        self.assertNotIn(attendee, response.context_data['attendees_with_avatar'])
+        self.assertIn(attendee, response.context_data['attendees_textual'])
