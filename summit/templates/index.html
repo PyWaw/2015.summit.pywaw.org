@@ -9,8 +9,8 @@
 
     <div class="intro-buttons">
       <div class="cfp">
-        <a href="https://docs.google.com/forms/d/1Ip3WkTEyCrgQ2F5cbwOnzhGfX6DopZjA2TaJt6Pik74/viewform" target="_blank" class="cfp__button">Call for papers</a>
-        <h3>Closing 1st April 2015</h3>
+        <a target="_blank" class="cfp__button not-active">Call for papers</a>
+        <h3>Closed 1st April 2015</h3>
       </div>
       <div class="registration-button">
         <a href="{% url 'attendee_create' %}" class="registration-button__link">Registration</a>
@@ -65,6 +65,27 @@
       <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Marc-Andre-Lemburg.png' %})"></div>
       <h3 class="speakers__name">Marc-André Lemburg</h3>
       <h4 class="speakers__tagline">Senior Architect<br>PSF Board Member</h4>
+    </div>
+    {# second row #}
+    <div class="speakers__item">
+      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Honza-Kral.png' %})"></div>
+      <h3 class="speakers__name">Honza Král</h3>
+      <h4 class="speakers__tagline">Python Engineer at Elastic</h4>
+    </div>
+    <div class="speakers__item">
+      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Katherine-Scott.png' %})"></div>
+      <h3 class="speakers__name">Katherine Scott</h3>
+      <h4 class="speakers__tagline">Software Lead at Tempo Automation</h4>
+    </div>
+    <div class="speakers__item">
+      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Lukasz-Langa.png' %})"></div>
+      <h3 class="speakers__name">Łukasz Langa</h3>
+      <h4 class="speakers__tagline">Python Core Developer</h4>
+    </div>
+    <div class="speakers__item">
+      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Rodolfo-Carvalho.png' %})"></div>
+      <h3 class="speakers__name">Rodolfo Carvalho</h3>
+      <h4 class="speakers__tagline">Senior Software Engineer at Red Hat</h4>
     </div>
     <p class="speakers__tba">... and many more awesome speakers soon!</p>
   </div>

@@ -246,7 +246,7 @@ a {
 }
 
 .cfp__button {
-  @include button();
+  @include button($disabled: true);
 
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
@@ -257,6 +257,12 @@ a {
   height: 41px;
   margin: 0;
   width: 100%;
+
+  &.not-active {
+    background: #7f807d;
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 .registration-button {
