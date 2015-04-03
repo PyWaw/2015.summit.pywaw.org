@@ -1034,3 +1034,34 @@ a {
 .payment__notpaid {
   color: red;
 }
+
+/*
+
+Attendees list
+
+*/
+
+.attendees-container {
+  @include grid-row();
+}
+
+.attendees {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.attendees__title {
+  @include section-title();
+  padding-top: 60px;
+}
+
+.attendees__grid {
+  @include block-grid(6);
+  @media #{$small-only} {
+    @include block-grid(3);
+  }
+  @media #{$medium-only} {
+    @include block-grid(4);
+  }
+}

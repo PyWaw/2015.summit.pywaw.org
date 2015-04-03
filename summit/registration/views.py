@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, ListView
 from . import models, forms
 
 
@@ -36,3 +36,21 @@ class AttendeeDetailView(DetailView):
     model = models.Attendee
     slug_url_kwarg = slug_field = 'hash'
 
+
+class AttendeesListView(ListView):
+    model = models.Attendee
+    context_object_name = 'attendees_with_avatar'
+
+    def get_queryset(self):
+        qs = super(AttendeesListView, self).get_queryset()
+        qs = qs.filter(display_on_website=True, is_paid=True).exclude(avatar='')
+        return qs
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['attendees_textual'] = models.Attendee.objects.filter(
+            display_on_website=True,
+            is_paid=True,
+            avatar='',
+        )
+        return context_data
