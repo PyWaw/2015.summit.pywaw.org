@@ -756,7 +756,53 @@ a {
   margin-bottom: 50px;
 }
 
+.sponsors__header {
+  @include grid-column($columns: 12);
+  @include title-font;
+  font-weight: 400;
+  text-align: center;
+  color: $gray-second-color;
+}
+
+.sponsors__core {
+  @include grid-row;
+}
+
+.sponsors__core__item {
+  @include grid-column(3);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.sponsors__core__item--offset {
+  @include grid-column(3, $center: true); // center for now, later it will be offset
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.sponsors__commiter {
+  @include grid-row;
+  margin-top: 30px;
+}
+
+.sponsors__commiter__item {
+  @include grid-column(3);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.sponsors__commiter__item--offset {
+  @include grid-column(3, $center: true); // center for now, later it will be offset
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
 .sponsors__text {
+  margin-top: 45px;
   margin-left: 10px;
 }
 
