@@ -1020,11 +1020,12 @@ a {
 }
 
 .payment__table-container {
-  @include grid-column(6, $offset: 3);
+  @include grid-column(12);
 }
 
 .payment__table {
-  width: 100%;
+  width: 50%;
+  margin: auto;
 }
 
 .payment__paid {

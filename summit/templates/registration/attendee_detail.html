@@ -3,13 +3,13 @@
 {% block content %}
 <div class="payment">
   <h2 class="payment__title">Registration completed</h2>
-  <p class="payment__section">Thank you for registration at PyWaw Summit conference! Please make a transfer to one of following bank account:</p>
+  <p class="payment__section">Thank you for registering to PyWaw Summit conference! Please make a transfer to one of the following bank accounts:</p>
   <div class="payment__table-container">
     <table class="payment__table">
       <thead>
         <tr>
           <th>Currency</th>
-          <th>Price&nbsp;(including&nbsp;23%&nbsp;tax)</th>
+          <th>Price (23%&nbsp;tax&nbsp;incl.)</th>
           <th>Bank account</th>
         </tr>
       </thead>
@@ -32,7 +32,7 @@
       </tbody>
     </table>
   </div>
-  <p class="payment__section">You should also receive an email with all payments details. If you have any questions please conntact us via <a mailto="registration@pywaw.org">registration@pywaw.org</a></p>
-  <p class="payment__section">You could always visit this page to check your payment status. <br>Payment status: {% if attendee.is_paid %}<span class="payment__paid">paid</span>{% else %}<span class="payment__notpaid">not paid</span>{% endif %}.</p>
+  <p class="payment__section">You should also receive an email with all the payment details. If you have any questions please contact us via <a mailto="registration@pywaw.org">registration@pywaw.org</a>.</p>
+  <p class="payment__section">You can visit this page at any time to check your payment status. <br>Payment status: {% if attendee.is_paid %}<span class="payment__paid">paid</span>{% else %}<span class="payment__notpaid">not paid</span>{% endif %}.</p>
 </div>
 {% endblock %}
