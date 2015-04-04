@@ -840,6 +840,39 @@ a {
 
 /*
 
+  Accommodation
+
+*/
+
+.accommodation-container {
+  @include grid-row;
+}
+
+.accommodation {
+  margin-bottom: 50px;
+}
+
+.accommodation__text {
+  margin-left: 10px;
+
+  h3 {
+    margin-bottom: 0.3em;
+
+    + p {
+      margin-top: 0;
+    }
+  }
+}
+
+.accommodation__title {
+  @include section-title;
+
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+/*
+
   Footer
 
 */

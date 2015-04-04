@@ -1,17 +1,17 @@
 Dear {{ attendee.name }}!
 
-Thank you for registration at PyWaw Summit conference! Please make a transfer to one of following bank account:
+Thank you for registering to PyWaw Summit conference! Please make a transfer to one of the following bank accounts:
 
-- currency: PLN, price: 340, bank account: 07 1090 2851 0000 0001 3023 6162
-- currency: EUR, price: 85, bank account: 77 1090 2851 0000 0001 2240 0891
-- currency: USD, price: 95, bank account: 27 1090 2851 0000 0001 2240 0918
+- currency: PLN, price (23% tax incl.): 340, bank account: 07 1090 2851 0000 0001 3023 6162
+- currency: EUR, price (23% tax incl.): 85, bank account: 77 1090 2851 0000 0001 2240 0891
+- currency: USD, price (23% tax incl.): 95, bank account: 27 1090 2851 0000 0001 2240 0918
 
 Transfer details:
 To: MCE-MeetLab Sp. z o.o.
 Address: ul. Osowska 23/6, 04-302 Warszawa
 Title: {{ attendee.name }}
 
-You could check your payment status on: http://{{ site }}{{ attendee.get_absolute_url }}
+You can check your payment status at http://{{ site }}{{ attendee.get_absolute_url }}. Also, if you’re looking for accommodation in Warsaw you can make use of our suggestions at http://{{ site }}/accommodation/.
 
 Best regards,
 PyWaw Summit Team
