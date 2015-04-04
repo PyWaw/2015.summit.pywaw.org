@@ -237,7 +237,7 @@ a {
 
 .cfp {
   width: 256px;
-  float: left;
+  float: right;
 
   @media #{$small-only} {
     float: none;
@@ -267,7 +267,7 @@ a {
 
 .registration-button {
   width: 256px;
-  float: right;
+  float: left;
 
   @media #{$small-only} {
     float: none;
