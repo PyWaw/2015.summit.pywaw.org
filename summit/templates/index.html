@@ -47,9 +47,19 @@
   <div class="speakers">
     <h2 class="speakers__title">Speakers</h2>
     <div class="speakers__item">
-      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Andrew-Godwin.png' %})"></div>
-      <h3 class="speakers__name">Andrew Godwin</h3>
+      <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Andrew-Godwin.png' %})" data-reveal-id="andrew-godwin-details"></div>
+      <h3 class="speakers__name" data-reveal-id="andrew-godwin-details">Andrew Godwin</h3>
       <h4 class="speakers__tagline">Django Core Developer</h4>
+      <div id="andrew-godwin-details" class="speaker-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+        <img class="speaker-modal__photo" src="{% static 'img/speakers/Andrew-Godwin.png' %}">
+        <div class="speaker-modal__description">
+          <h2 id="modalTitle" class="speaker-modal__name">Andrew Godwin</h2>
+          <h3 class="speaker-modal__tagline">Django Core Developer</h3>
+          <p class="speaker-modal__twitter"><a href="https://twitter.com/andrewgodwin" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @andrewgodwin</a></p>
+          <p>Andrew is a Django core developer and backend engineer, specialising in system architecture and data storage. He currently works on Eventbrite's Architecture team, helping to scale Eventbrite to handle an ever-growing number of events and users. In his spare time, he also enjoys archery, flying light aircraft, mountains, and cheese.</p>
+          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        </div>
+      </div>
     </div>
     <div class="speakers__item">
       <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Damien-George.png' %})"></div>

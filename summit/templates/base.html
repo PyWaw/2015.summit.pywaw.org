@@ -68,6 +68,7 @@
 
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}bower_components/foundation/js/foundation.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/venue.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/misc.js"></script>
@@ -78,6 +79,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-60250784-1', 'auto');
   ga('send', 'pageview');
+  $(document).foundation();
 </script>
 {% block js %}{% endblock %}
 

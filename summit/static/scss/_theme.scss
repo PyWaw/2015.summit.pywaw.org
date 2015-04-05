@@ -531,12 +531,14 @@ a {
   background-position: 50%;
   background-size: contain;
   visibility: visible;
+  cursor: pointer;
 }
 
 .speakers__name {
   color: $orange-color;
   text-align: center;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .speakers__tagline {
@@ -557,6 +559,38 @@ a {
   @media #{$small-only} {
     @include grid-column($columns: 12);
   }
+}
+
+.speaker-modal {
+  @extend .reveal-modal;
+}
+
+.speaker-modal__photo {
+  @include grid-column(3);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.speaker-modal__description {
+  @include grid-column(9);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.speaker-modal__name {
+  font-size: rem-calc(24);
+  color: $orange-color;
+  font-weight: 600;
+}
+
+.speaker-modal__tagline {
+  font-size: rem-calc(20);
+}
+
+.speaker-modal__twitter-icon {
+  height: 20px;
 }
 
 .organisers__title {
