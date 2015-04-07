@@ -14,12 +14,13 @@ def create_attendee_hash():
 
 
 def set_avatar(sender, instance, **kwargs):
-    gravatar_url = "http://www.gravatar.com/avatar/" + hashlib.md5(instance.email.lower().encode('utf-8')).hexdigest()
-    response = requests.get(gravatar_url, params={'d': 404})
-    if response.ok:
-        instance.avatar = gravatar_url
-    else:
-        instance.avatar = ''
+    if not instance.avatar:
+        gravatar_url = "http://www.gravatar.com/avatar/" + hashlib.md5(instance.email.lower().encode('utf-8')).hexdigest()
+        response = requests.get(gravatar_url, params={'d': 404})
+        if response.ok:
+            instance.avatar = gravatar_url
+        else:
+            instance.avatar = ''
 
 
 class Attendee(models.Model):
