@@ -672,6 +672,56 @@ a {
   }
 }
 
+
+/*
+
+  AGENDA
+
+*/
+
+.agenda-container {
+
+}
+
+.agenda {
+  @include grid-row();
+}
+
+.agenda__title {
+  @include section-title;
+}
+
+.agenda__day-header {
+  @include grid-column($columns: 12);
+  text-align: center;
+  @include title-font;
+  color: $grey-color;
+}
+
+.agenda__entry {
+  @include grid-row();
+}
+
+.agenda__entry-hours {
+  color: $grey-color;
+  @include grid-column($columns: 1);
+  font-size: rem-calc(18);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.agenda__entry-photo {
+  @include grid-column($columns: 1);
+}
+
+.agenda__entry-line {
+  @include grid-column($columns: 12);
+  background-color: $grey-color;
+  height: rem-calc(1);
+}
+
+
 .venue-container {
   height: 400px;
   position: relative;
