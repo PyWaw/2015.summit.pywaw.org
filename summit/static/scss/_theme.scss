@@ -594,6 +594,11 @@ a {
   font-size: rem-calc(20);
 }
 
+.speaker-modal__talk-title {
+  font-size: rem-calc(20);
+  color: $orange-color;
+}
+
 .speaker-modal__twitter-icon {
   height: 20px;
 }
