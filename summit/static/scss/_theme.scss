@@ -705,6 +705,10 @@ a {
   border-bottom: $grey-color 1px solid;
 }
 
+.agenda__entry--last {
+  border-bottom: none;
+}
+
 .agenda__entry-hours {
   color: $grey-color;
   @include grid-column($columns: 1);
@@ -713,6 +717,25 @@ a {
   margin-right: 30px;
   @media #{$small-only} {
     @include grid-column($columns: 12);
+    text-align: left;
+  }
+}
+
+.agenda__entry-start {
+  @media #{$small-only} {
+    display: inline;
+  }
+}
+
+.agenda__entry-end {
+  @media #{$small-only} {
+    display: inline;
+  }
+}
+
+.agenda__entry-end::before {
+  @media #{$small-only} {
+    content: "- ";
   }
 }
 
@@ -747,10 +770,16 @@ a {
   margin-left: 5px;
   margin-right: 25px;
   cursor: pointer;
+  @media #{$small-only} {
+   display: none;
+  }
 }
 
 .agenda__entry-details {
   @include grid-column($columns: 9);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
 }
 
 
