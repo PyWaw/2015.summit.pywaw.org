@@ -76,9 +76,26 @@
         <h4 class="speakers__tagline">Author of pytest and tox</h4>
       </div>
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Marc-Andre-Lemburg.png' %})"></div>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Marc-Andre-Lemburg.png' %})" data-reveal-id="marc-andre-lemburg-details"></div>
         <h3 class="speakers__name">Marc-André Lemburg</h3>
         <h4 class="speakers__tagline">Senior Architect<br>PSF Board Member</h4>
+        <div id="marc-andre-lemburg-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Marc-Andre-Lemburg.png' %}" data-reveal-id="marc-andre-lemburg-details">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Marc-André Lemburg</h2>
+            <h3 class="speaker-modal__tagline">Senior Architect, PSF Board Member</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/malemburg" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @malemburg</a></p>
+            <p>Marc-Andre is the CEO and founder of eGenix.com, a Python-focused project and consulting company based in Germany. He has a degree in mathematics from the University of Düsseldorf.</p>
+            <p>His work with and for Python started in 1993/1994. He is a Python Core Developer, designed and implemented the Unicode support in Python 1.6, and author of the mx Extensions, e.g. mxTools, mxDateTime and mxODBC, which are now distributed and maintained through eGenix.com.</p>
+            <p>Marc-Andre is a Python Software Foundation (PSF) Fellow and board member, an EuroPython Society (EPS) board member and co-founded a local Python meeting in Düsseldorf (PyDDF).</p>
+            <p>More infos are available at <a href="https://wiki.python.org/moin/MarcAndreLemburg">https://wiki.python.org/moin/MarcAndreLemburg</a></p>
+            <h3 class="speaker-modal__talk-title">Keynote: The Python Community - Present, Past and Future</h3>
+            <p>In this keynote, I will take the audience on a tour through the development of the Python community. Starting 20 years ago, looking at important milestones, showing current developments and giving an outlook of where we might be heading in the next few years. Hope you'll enjoy the ride.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Designing Large-Scale Applications in Python</h3>
+            <p>Concepts for designing large and scalable Python applications that work in practice. Python is often referred to as a scripting language. While Python is an ideal platform for scripting, integration or plugin tasks, it does in fact cover all the concepts needed for truly large-scale object oriented application development. However, complex applications bring new challenges. The talk draws on my experience with large-scale application design using Python as central implementation language and provides a cookbook approach to many of the problems you face when designing and organizing complex application frameworks. The approach has been used in many real-life projects, ranging from web application servers in varying fields of application to complete finance trading systems. Python has always proven to be a truly good choice with an outstanding time-to-market advantage over other implementation languages such as Java or C++. It allows small software development companies to successfully compete against multi-million dollar ventures.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
       </div>
     </div>
     {# second row #}
