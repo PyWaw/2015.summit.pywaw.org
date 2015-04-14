@@ -10,8 +10,8 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         return (
-            ('not_payed', 'Registered, not yet payed'),
-            ('payed', 'Payed attendees'),
+            ('not_paid', 'Registered, not yet paid'),
+            ('paid', 'Paid attendees'),
             ('speakers', 'Speakers'),
             ('organizers', 'Organizers'),
             ('volunteers', 'Volunteers'),
@@ -26,15 +26,17 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
 
             'speakers': dict(is_speaker=True),
 
-            'payed': dict(is_organizer=False,
+            'paid': dict(is_organizer=False,
                           is_volunteer=False,
                           is_speaker=False,
-                          is_payed=True),
+                          is_paid=True),
 
-            'not_payed': dict(is_organizer=False,
+            'not_paid': dict(is_organizer=False,
                               is_volunteer=False,
                               is_speaker=False,
-                              is_payed=True),
+                              is_paid=False),
+
+            None: dict(),
         }
 
         return queryset.filter(**filters[self.value()])
@@ -54,27 +56,22 @@ class AttendeeModelAdmin(admin.ModelAdmin):
 
     readonly_fields = ('registration_date',)
 
-    actions = ['marked_as_payed', 'marked_invoice_sent']
+    actions = ['marked_as_paid', 'marked_invoice_sent']
 
-    list_filter = (
-        AttendeesTypesListFilter,
-        ('is_speaker', admin.BooleanFieldListFilter),
-        ('is_organizer', admin.BooleanFieldListFilter),
-        ('is_volunteer', admin.BooleanFieldListFilter),
-    )
+    list_filter = (AttendeesTypesListFilter,)
 
-    def marked_as_payed(self, request, queryset):
+    def marked_as_paid(self, request, queryset):
         rows_updated = queryset.update(is_paid=True)
 
-        self.message_user(request, "({}) attendees were marked as payed.".format(rows_updated))
+        self.message_user(request, "({}) attendees were marked as paid.".format(rows_updated))
 
-    marked_as_payed.short_description = "Marked as payed"
+    marked_as_paid.short_description = "Marked as paid"
 
     def marked_invoice_sent(self, request, queryset):
         rows_updated = queryset.update(invoice_sent=True)
 
         self.message_user(request, "({}) attendees were marked as invoice sent.".format(rows_updated))
 
-    marked_as_payed.short_description = "Mark invoice sent"
+    marked_as_paid.short_description = "Mark invoice sent"
 
 admin.site.register(models.Attendee, AttendeeModelAdmin)
