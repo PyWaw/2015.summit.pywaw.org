@@ -21,10 +21,10 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
             is_volunteer=False,
         )
 
-        if self.value() == 'all':
-            return queryset
-        elif self.value() == 'payed':
-            return queryset.filter(is_payed=True)
+        if self.value() == 'payed':
+            queryset = queryset.filter(is_payed=True)
+
+        return queryset
 
 
 class AttendeeModelAdmin(admin.ModelAdmin):
