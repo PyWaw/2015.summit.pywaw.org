@@ -4,27 +4,40 @@ from . import models
 
 class AttendeesTypesListFilter(admin.SimpleListFilter):
 
-    title = 'Regular attendees'
+    title = 'Attendees by type'
 
     parameter_name = 'attendee_filter'
 
     def lookups(self, request, model_admin):
         return (
-            ('all', 'Attendees without special role'),
-            ('payed', 'Payed attendees w/o special role'),
+            ('not_payed', 'Registered, not yet payed'),
+            ('payed', 'Payed attendees'),
+            ('speakers', 'Speakers'),
+            ('organizers', 'Organizers'),
+            ('volunteers', 'Volunteers'),
         )
 
     def queryset(self, request, queryset):
-        queryset = queryset.filter(
-            is_organizer=False,
-            is_speaker=False,
-            is_volunteer=False,
-        )
 
-        if self.value() == 'payed':
-            queryset = queryset.filter(is_payed=True)
+        filters = {
+            'organizers': dict(is_organizer=True),
 
-        return queryset
+            'volunteers': dict(is_volunteer=True),
+
+            'speakers': dict(is_speaker=True),
+
+            'payed': dict(is_organizer=False,
+                          is_volunteer=False,
+                          is_speaker=False,
+                          is_payed=True),
+
+            'not_payed': dict(is_organizer=False,
+                              is_volunteer=False,
+                              is_speaker=False,
+                              is_payed=True),
+        }
+
+        return queryset.filter(**filters[self.value()])
 
 
 class AttendeeModelAdmin(admin.ModelAdmin):
