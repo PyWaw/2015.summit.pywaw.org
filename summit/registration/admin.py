@@ -40,7 +40,7 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
             'need_invoice': dict(is_organizer=False,
                                  is_volunteer=False,
                                  is_speaker=False,
-                                 is_paid=False,
+                                 is_paid=True,
                                  invoice_sent=False),
 
             None: dict(),
