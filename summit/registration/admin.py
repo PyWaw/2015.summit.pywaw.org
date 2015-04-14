@@ -12,6 +12,7 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
         return (
             ('not_paid', 'Registered, not yet paid'),
             ('paid', 'Paid attendees'),
+            ('need_invoice', 'Need invoice'),
             ('speakers', 'Speakers'),
             ('organizers', 'Organizers'),
             ('volunteers', 'Volunteers'),
@@ -35,6 +36,12 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
                               is_volunteer=False,
                               is_speaker=False,
                               is_paid=False),
+
+            'need_invoice': dict(is_organizer=False,
+                                 is_volunteer=False,
+                                 is_speaker=False,
+                                 is_paid=False,
+                                 invoice_sent=False),
 
             None: dict(),
         }
