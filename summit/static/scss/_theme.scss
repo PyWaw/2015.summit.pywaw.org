@@ -267,7 +267,7 @@ a {
 
 .registration-button {
   width: 256px;
-  float: left;
+  margin: auto;
 
   @media #{$small-only} {
     float: none;
