@@ -8,7 +8,7 @@
     {% for attendee in attendees_with_avatar %}
       <li>
         {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}">{% endif %}
-        <img src="{{ attendee.avatar }}?s=150" alt="{{ attendee.name }} ({{ attendee.tagline }})">
+        <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})">
         {% if attendee.twitter %}</a>{% endif %}
       </li>
     {% endfor %}

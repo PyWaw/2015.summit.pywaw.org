@@ -4,6 +4,7 @@ from django.db import models
 import uuid
 from django.db.models.signals import pre_save
 import requests
+from . import twitter
 
 
 def create_attendee_hash():
@@ -15,12 +16,14 @@ def create_attendee_hash():
 
 def set_avatar(sender, instance, **kwargs):
     if not instance.avatar:
-        gravatar_url = "http://www.gravatar.com/avatar/" + hashlib.md5(instance.email.lower().encode('utf-8')).hexdigest()
+        email_hash = hashlib.md5(instance.email.lower().encode('utf-8')).hexdigest()
+        gravatar_url = "http://www.gravatar.com/avatar/{}?s=150".format(email_hash)
         response = requests.get(gravatar_url, params={'d': 404})
+
         if response.ok:
             instance.avatar = gravatar_url
         else:
-            instance.avatar = ''
+            instance.avatar = twitter.get_twitter_avatar_url(instance.twitter)
 
 
 class Attendee(models.Model):

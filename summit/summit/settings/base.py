@@ -102,3 +102,4 @@ COMPRESS_PRECOMPILERS = (
 
 REGISTRATION_EMAIL = 'Registration <registration@pywaw.org>'
 REGISTRATION_NOTIFICATIONS_URL = None
+
