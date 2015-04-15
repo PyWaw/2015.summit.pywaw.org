@@ -16,6 +16,7 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
             ('speakers', 'Speakers'),
             ('organizers', 'Organizers'),
             ('volunteers', 'Volunteers'),
+            ('missing_avatar', 'Needs avatar set'),
         )
 
     def queryset(self, request, queryset):
@@ -42,6 +43,9 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
                                  is_speaker=False,
                                  is_paid=True,
                                  invoice_sent=False),
+
+            'missing_avatar': dict(display_on_website=True,
+                                   avatar=None),
 
             None: dict(),
         }
