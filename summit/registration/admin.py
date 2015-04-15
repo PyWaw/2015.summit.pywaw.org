@@ -45,7 +45,7 @@ class AttendeesTypesListFilter(admin.SimpleListFilter):
                                  invoice_sent=False),
 
             'missing_avatar': dict(display_on_website=True,
-                                   avatar=None),
+                                   avatar=''),
 
             None: dict(),
         }
