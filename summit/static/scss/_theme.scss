@@ -935,7 +935,7 @@ a {
 }
 
 .sponsors__core__item--offset {
-  @include grid-column(3, $center: true); // center for now, later it will be offset
+  @include grid-column(3, $offset: 2);
   @media #{$small-only} {
     @include grid-column($columns: 12);
   }
