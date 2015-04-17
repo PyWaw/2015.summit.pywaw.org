@@ -67,9 +67,22 @@
         <h4 class="speakers__tagline">Creator of MicroPython</h4>
       </div>
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Holger-Kregel.png' %})"></div>
-        <h3 class="speakers__name">Holger Krekel</h3>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Holger-Krekel.png' %})" data-reveal-id="holger-krekel-details"></div>
+        <h3 class="speakers__name" data-reveal-id="holger-krekel-details">Holger Krekel</h3>
         <h4 class="speakers__tagline">Author of pytest and tox</h4>
+        <div id="holger-krekel-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Holger-Krekel.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Holger Krekel</h2>
+            <h3 class="speaker-modal__tagline">Author of pytest and tox</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/hpk42" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @hpk42</a></p>
+            <p>Holger Krekel is active in the Python community since 2002. He has given numerous talks including a keynote at EP2013 on "the return of P2P computing" and many trainings on automated testing and packaging. He is a co-founder of the PyPy project and maintains many well-known tools such as tox, pytest and devpi in the Python tooling landscape. His recent technical interests include the building of decentralized and crypto systems and working as a journalist from time to time. </p>
+            <h3 class="speaker-modal__talk-title">Talk: Stories about decentralization and diversity</h3>
+            <p>Since my keynote at EP2013 about “the return of P2P computing” i’ve been to many meet ups and discussions to “redecentralize” the web. I’d like to summarize and highlight what i’ve learned about the topic on technical, economic and philosophical levels since my talk in Florence.
+               What is technically hard about building distributed systems without a controlling center?  What is attractive and to be liked about centralization, actually?  How is "normative" thinking regarding gender or race related?  Last but not least i’ll focus on what role Python does and could play in existing “redencentralization” projects. </p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
       </div>
       <div class="speakers__item">
         <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Marc-Andre-Lemburg.png' %})" data-reveal-id="marc-andre-lemburg-details"></div>
