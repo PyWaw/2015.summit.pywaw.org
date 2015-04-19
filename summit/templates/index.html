@@ -232,6 +232,57 @@
         </div>
       </div>
     </div>
+    {# fourth row #}
+    <div class="speakers__row">
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Ola-Sitarska.png' %})" data-reveal-id="ola-sitarska-details"></div>
+        <h3 class="speakers__name" data-reveal-id="ola-sitarska-details">Ola Sitarska</h3>
+        <h4 class="speakers__tagline">Developer at Potato<br/>Co-founder of Django Girls</h4>
+        <div id="ola-sitarska-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Ola-Sitarska.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Ola Sitarska</h2>
+            <h3 class="speaker-modal__tagline">Developer at Potato<br/>Co-founder of Django Girls</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/olasitarska" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @olasitarska</a></p>
+            <p>Ola Sitarska is a Django Developer at Potato. She started working with Django 6 years ago, when she discovered the power of Django admin and quickly felt in love with the beauty of Python. Last year, Ola started Django Girls, an initiative to inspire more women to become programmers. Together with Ola Sendecka, she also co-authored the Django Girls Tutorial, which has been visited by more than 30.000 people so far. She is also a member of the Django Team and was responsible for the shipping djangoproject.com redesign. In 2015, she became a Django Software Foundation board member. Ola is also known as A Person With The Django Circus Idea™. She thinks her superpower is the unstoppable enthusiasm.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Snakes, ponies and balloons: stories of teaching Python to thousands of women.</h3>
+            <p>Django Girls is a workshop for total beginners into the world of web building. Started by two Polish girls in Berlin and now organized all over the world in 45 cities, Django Girls aim to inspire women to fell in love with programming. Ola will share with you how she went from not knowing anything about teaching programming or feminism, to knowing a little bit more thanks to thousands of people who participated in the workshop formula Django Girls created. You'll learn the secrets of explaining the Internet, servers or ORM to people who never done this before. And how to find 100+ women who want to learn to code just about anywhere. This talk is your introduction to the world of getting girls excited about snakes, ponies and balloons.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
+      </div>
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Brent-Tubbs.png' %})" data-reveal-id="brent-tubbs-details"></div>
+        <h3 class="speakers__name" data-reveal-id="brent-tubbs-details">Brent Tubbs</h3>
+        <h4 class="speakers__tagline">Deputy Technical Director at YouGov</h4>
+        <div id="brent-tubbs-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Brent-Tubbs.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Brent Tubbs</h2>
+            <h3 class="speaker-modal__tagline">Deputy Technical Director at YouGov</h3>
+            <p>Brent Tubbs is the Deputy Technical Director at YouGov, an online market research and political polling firm. He is the primary author of Velociraptor, an open source platform-as-a-service for deploying Heroku-compatible applications, and of Mettle, a data pipeline framework being open sourced at the PyWaw conference.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Real-time web apps with (just) Python and Postgres</h3>
+            <p>The design and documentation of the leading Python web frameworks are heavily focused on building web sites, with HTML content rendered on the server, and require significant effort to support modern web apps that use RESTful APIs, real-time updates over websockets, and Javascript-based user interfaces.</p>
+            <p>If we start with a clean slate and design a framework around the needs of a real-time single-page-application, several things become apparent:</p>
+            <ol>
+              <li>A big framework like Django has a lot of stuff we don't need, while still missing a lot of stuff we do need.</li>
+              <li>Minimalist Python HTTP libraries (Werkzeug, CherryPy) can still do most of the heavy lifting on the server side, and save us from having to start completely from scratch.</li>
+              <li>Gevent can allow a Python application to scale to large numbers of simultaneous connections without littering a codebase with hard-to-follow callbacks.</li>
+              <li>Without a big framework in the way, an API can cleanly add live websocket streams to existing RESTful endpoints, to deliver exactly the data that clients are interested in.</li>
+            </ol>
+            <p>Using the well-known TodoMVC application as an example, this presentation will give a tour of a simple Python backend that provides live syncing between browsers using just Python, Postgres, and a Werkzeug based micro framework that integrates REST endpoints and websockets into a single, coherent API.</p>
+            <p>Though approachable to beginners, this talk will be of greatest interest to intermediate-level Python programmers who have used Django in the past and wondered how to move on to something more modern, but not more complicated.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
+      </div>
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})"></div>
+      </div>
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})"></div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="venue-container" id="venue">
