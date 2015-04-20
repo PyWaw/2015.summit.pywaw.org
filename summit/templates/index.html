@@ -178,6 +178,25 @@
         </div>
       </div>
       <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Ola-Sendecka.png' %})" data-reveal-id="ola-sendecka-details"></div>
+        <h3 class="speakers__name" data-reveal-id="ola-sendecka-details">Ola Sendecka</h3>
+        <h4 class="speakers__tagline">Developer at Potato<br/>Co-founder of Django Girls</h4>
+        <div id="ola-sendecka-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Ola-Sendecka.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Ola Sendecka</h2>
+            <h3 class="speaker-modal__tagline">Developer at Potato<br/>Co-founder of Django Girls</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/asendecka" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @asendecka</a></p>
+            <p>Python & Django enthusiast and magic maker. Co-founder of Django Girls, Django Core developer and DSF member. Serial Django Girls coach and Django sprint organizer. Co-organizer of Django Con (Circus edition) in 2013.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Into the Rabbit Hole</h3>
+            <p>Django is awesome when it comes to speeding up a development process. The famous Django’s magic will let you develop quickly and easily. But there are times, when Django's magic is gone and you end up in a rabbit hole, chasing a rabbit instead of stoping as soon as possible and find your way out.</p>
+            <p>The talk will be a case study of how one can end up in rabbit hole. We will see how easy it is to end up digging in Django Model Forms, instead of looking at the problem objectively.</p>
+            <p>The talk goal is to start a discussion about techniques that help you realize that you are going in a wrong direction and you should go back one or two steps as soon as possible.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
+      </div>
+      <div class="speakers__item">
         <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Konrad-Gawda.png' %})" data-reveal-id="konrad-gawda-details"></div>
         <h3 class="speakers__name" data-reveal-id="konrad-gawda-details">Konrad Gawda</h3>
         <h4 class="speakers__tagline">Network Specialist</h4>
@@ -190,25 +209,6 @@
             <h3 class="speaker-modal__talk-title">Talk: Software Defined Networking in Python</h3>
             <p>Software Defined Networking (SDN) is currently a strong trend in telecommunications, strongly linked with virtualization. It allows splitting Control Plane from Data Plane. We will go through some theory and industry background. Then most popular SDN protocol - OpenFlow - will be introduced. We will see how to use it with Python frameworks such as POX.</p>
             <p>Experience with SDN will be useful for work in Telco networks as well as data centers. Basic knowledge of Python and Ethernet/IP networking is required.</p>
-            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-          </div>
-        </div>
-      </div>
-      <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Jan-Urbanski.png' %})" data-reveal-id="jan-urbanski-details"></div>
-        <h3 class="speakers__name" data-reveal-id="jan-urbanski-details">Jan Urbański</h3>
-        <h4 class="speakers__tagline">Lead Developer at New Relic</h4>
-        <div id="jan-urbanski-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
-          <img class="speaker-modal__photo" src="{% static 'img/speakers/Jan-Urbanski.png' %}">
-          <div class="speaker-modal__description">
-            <h2 class="speaker-modal__name">Jan Urbański</h2>
-            <h3 class="speaker-modal__tagline">Lead Developer at New Relic</h3>
-            <p>I've been using Python profesionally since 2009. I'm a developer and an Open Source contributor for a number of projects. I added some features to Postgres embedded Python bindings, maintain an asynchronous Postgres driver for Twisted called txpostgres and wrote a Twisted connector for Pika (a Python AMQP library). Currently, I work as Lead Developer for New Relic, an Application Performance Monitoring company, after they acquired a startup I founded earlier.</p>
-            <h3 class="speaker-modal__talk-title">Talk: On snakes and elephants</h3>
-            <p>Everyone knows you can connect to PostgreSQL from Python, but not everyone knows you can actually make the PostgreSQL server process execute Python code in an embedded interpreter.</p>
-            <p>PL/Python is a stored procedure language for PostgreSQL, allowing extending Postgres with Python.</p>
-            <p>The use cases are limitless, from moving your business logic into the database, to doing number crunching inside the database server process without having to ship raw data to external worker nodes.</p>
-            <p>We'll talk about how would you write an embedded Python procedure inside Postgres, what functionality it offers and what are the quirks and challenges posed by running a Python interpreter inside a database server process.</p>
             <a class="close-reveal-modal" aria-label="Close">&#215;</a>
           </div>
         </div>
@@ -277,7 +277,23 @@
         </div>
       </div>
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})"></div>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Jan-Urbanski.png' %})" data-reveal-id="jan-urbanski-details"></div>
+        <h3 class="speakers__name" data-reveal-id="jan-urbanski-details">Jan Urbański</h3>
+        <h4 class="speakers__tagline">Lead Developer at New Relic</h4>
+        <div id="jan-urbanski-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Jan-Urbanski.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Jan Urbański</h2>
+            <h3 class="speaker-modal__tagline">Lead Developer at New Relic</h3>
+            <p>I've been using Python profesionally since 2009. I'm a developer and an Open Source contributor for a number of projects. I added some features to Postgres embedded Python bindings, maintain an asynchronous Postgres driver for Twisted called txpostgres and wrote a Twisted connector for Pika (a Python AMQP library). Currently, I work as Lead Developer for New Relic, an Application Performance Monitoring company, after they acquired a startup I founded earlier.</p>
+            <h3 class="speaker-modal__talk-title">Talk: On snakes and elephants</h3>
+            <p>Everyone knows you can connect to PostgreSQL from Python, but not everyone knows you can actually make the PostgreSQL server process execute Python code in an embedded interpreter.</p>
+            <p>PL/Python is a stored procedure language for PostgreSQL, allowing extending Postgres with Python.</p>
+            <p>The use cases are limitless, from moving your business logic into the database, to doing number crunching inside the database server process without having to ship raw data to external worker nodes.</p>
+            <p>We'll talk about how would you write an embedded Python procedure inside Postgres, what functionality it offers and what are the quirks and challenges posed by running a Python interpreter inside a database server process.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
       </div>
       <div class="speakers__item">
         <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})"></div>
