@@ -928,20 +928,30 @@ a {
 }
 
 .sponsors__core__item {
-  @include grid-column(3);
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 2);
+  }
   @media #{$small-only} {
-    @include grid-column($columns: 12);
+    @include grid-column($columns: 12, $center: true);
   }
 }
 
 .sponsors__core__item--offset {
-  @include grid-column(3, $offset: 2);
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 2);
+  }
   @media #{$small-only} {
-    @include grid-column($columns: 12);
+    @include grid-column($columns: 12, $center: true);
+    margin-bottom: rem-calc(50);
   }
 }
 
 .sponsors__commiter {
+  @include grid-row;
+  margin-top: 30px;
+}
+
+.sponsors__supporter {
   @include grid-row;
   margin-top: 30px;
 }
@@ -954,6 +964,13 @@ a {
 }
 
 .sponsors__commiter__item--offset {
+  @include grid-column(3, $center: true); // center for now, later it will be offset
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
+.sponsors__supporter__item--offset {
   @include grid-column(3, $center: true); // center for now, later it will be offset
   @media #{$small-only} {
     @include grid-column($columns: 12);
