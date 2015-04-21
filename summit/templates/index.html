@@ -110,9 +110,21 @@
     {# second row #}
     <div class="speakers__row">
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Brandon-Rhodes.png' %})"></div>
-        <h3 class="speakers__name">Brandon Rhodes</h3>
-        <h4 class="speakers__tagline">Developer at Dropbox<br/>Chair of PyCon 2016-2017</h4>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Brandon-Rhodes.png' %})" data-reveal-id="brandon-rhodes-details"></div>
+        <h3 class="speakers__name" data-reveal-id="brandon-rhodes-details">Brandon Rhodes</h3>
+        <h4 class="speakers__tagline">Engineer at Dropbox<br/>Chair of PyCon 2016-2017</h4>
+        <div id="brandon-rhodes-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Brandon-Rhodes.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Brandon Rhodes</h2>
+            <h3 class="speaker-modal__tagline">Engineer at Dropbox<br/>Chair of PyCon 2016-2017</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/brandon_rhodes" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @brandon_rhodes</a></p>
+            <p>Brandon is a programmer and instructor working at Dropbox, and is excited that this is his third chance to speak at a Python event in Poland.  For 17 years Brandon has maintained the most popular amateur astronomy library for Python, and will be the Chair of PyCon 2016–2017 in Portland, Oregon.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Hoist Your I/O</h3>
+            <p>Our programs too often leave control decisions stranded in low-level routines, producing tightly coupled systems that make it difficult to re-use code. What are the warning signs of tightly coupled I/O and how can it be corrected? Particular attention will be paid to the way that modern Python syntax supports a broader array of solutions than were once possible!</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
       </div>
       <div class="speakers__item">
         <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Honza-Kral.png' %})" data-reveal-id="honza-kral-details"></div>
@@ -124,7 +136,6 @@
             <h2 class="speaker-modal__name">Honza Král</h2>
             <h3 class="speaker-modal__tagline">Python Engineer at Elastic</h3>
             <p class="speaker-modal__twitter"><a href="https://twitter.com/honzakral" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @honzakral</a></p>
-            <p></p>
             <h3 class="speaker-modal__talk-title">Talk: Beyond the basics with Elasticsearch</h3>
             <p>Elasticsearch has many use cases, some of them fairly obvious and widely used, like plain searching through documents or analytics. In this talk I would like to go through some of the more advanced scenarios we have seen in the wild. Some examples of what we will cover:</p>
             <ul>
