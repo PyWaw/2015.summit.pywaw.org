@@ -235,7 +235,7 @@ a {
   }
 }
 
-.cfp {
+.newsletter {
   width: 256px;
   float: right;
 
@@ -245,7 +245,7 @@ a {
   }
 }
 
-.cfp__button {
+.newsletter__button {
   @include button($disabled: true);
 
   text-transform: uppercase;
@@ -267,7 +267,7 @@ a {
 
 .registration-button {
   width: 256px;
-  margin: auto;
+  float: left;
 
   @media #{$small-only} {
     float: none;
@@ -1274,4 +1274,23 @@ Attendees list
   @media #{$medium-only} {
     @include block-grid(4);
   }
+}
+
+.newsletter-modal {
+  @extend .reveal-modal;
+}
+
+.newsletter-modal__title {
+  @include section-title();
+}
+.newsletter-modal__subscribe {
+  @include custom-button();
+  width: 300px;
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+.newsletter-modal__content {
+  @include grid-column(12);
 }
