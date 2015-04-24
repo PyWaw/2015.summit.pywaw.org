@@ -324,7 +324,46 @@
         </div>
       </div>
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})"></div>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})" data-reveal-id="tomasz-chodun-details"></div>
+        <h3 class="speakers__name" data-reveal-id="tomasz-chodun-details">Tomasz Choduń</h3>
+        <h4 class="speakers__tagline">Software Architect<br>at Webinterpret</h4>
+        <div id="tomasz-chodun-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/placeholder.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Tomasz Choduń</h2>
+            <h3 class="speaker-modal__tagline">Software Architect at Webinterpret</h3>
+            <p>Experienced software developer and software architect. Was working with few startups (some of them successful;)) and quite big companies. Loves clean, readable code and nice software design.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Monolithic app to microservices transition is easy...</h3>
+            <p>Microservices architecture is trendy right now ;) It's often a good choice for building sophisticated applications but on the other hand you have to be aware about difficulties with this architecture. What do you need to remember about if you have monolithic app right now and want to move into microservices world? I would like to summarize what I've learned about this transition process recently. This presentation will shortly cover main issues you will have to solve during transition process and how Python can help here:</p>
+            <ul>
+              <li>infrastructure - how many hosts do you need, is it expensive?</li>
+              <li>release and deployment - how to version your applications and run them,</li>
+              <li>testing - what do you need to test process which uses many services?</li>
+              <li>communication between services - what python tools can be handy?</li>
+            </ul>
+            <p>This talk will be of greatest interest to everybody feeling responsible for architecture of Python systems they are working on.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {# fifth row #}
+    <div class="speakers__row">
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})" data-reveal-id="szymon-pyzalski-details"></div>
+        <h3 class="speakers__name" data-reveal-id="szymon-pyzalski-details">Szymon Pyżalski</h3>
+        <h4 class="speakers__tagline">Software Engineer<br>at Allegro Group</h4>
+        <div id="szymon-pyzalski-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/placeholder.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Szymon Pyżalski</h2>
+            <h3 class="speaker-modal__tagline">Software Engineer at Allegro Group</h3>
+            <p>Born 1982. Programming for life since 2009. In python since 2011. Currently member of the ralph team in Allegro Group.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Queueing tasks with rq</h3>
+            <p>Do you need a simple queueing system to communicate between various python processes? Then RQ might be a solution for you. I will show you how to set up your tasks in RQ and how to solve some common problems with this technology.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
