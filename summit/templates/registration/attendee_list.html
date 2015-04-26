@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block js %}
+{{ block.super }}
+<script src="{{ STATIC_URL }}bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="attendees-container">
   <h2 class="attendees__title">Attendees</h2>
@@ -7,8 +12,8 @@
     <ul class="attendees__grid">
     {% for attendee in attendees_with_avatar %}
       <li>
-        {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}">{% endif %}
-        <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})">
+        {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}" target="_blank">{% endif %}
+        <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true">
         {% if attendee.twitter %}</a>{% endif %}
       </li>
     {% endfor %}
