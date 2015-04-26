@@ -1256,7 +1256,7 @@ Attendees list
 }
 
 .attendees {
-  margin-left: 20px;
+  margin-left: 10px;
   margin-right: 20px;
   margin-bottom: 50px;
 }
@@ -1264,6 +1264,11 @@ Attendees list
 .attendees__title {
   @include section-title();
   padding-top: 60px;
+}
+
+.attendees__intro {
+  @include grid-column(12);
+  margin-top: 0;
 }
 
 .attendees__grid {
