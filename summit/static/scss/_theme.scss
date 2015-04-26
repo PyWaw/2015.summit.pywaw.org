@@ -353,6 +353,10 @@ a {
     margin-top: 0;
     line-height: rem-calc(22);
   }
+
+  a {
+    color: $orange-color;
+  }
 }
 
 .about__title {
