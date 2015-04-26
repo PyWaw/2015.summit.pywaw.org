@@ -10,21 +10,16 @@
   <h2 class="attendees__title">Attendees</h2>
   <div class="attendees">
     <ul class="attendees__grid">
-    {% for attendee in attendees_with_avatar %}
+    {% for attendee in attendees %}
       <li>
         {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}" target="_blank">{% endif %}
+        {% if attendee.avatar %}
         <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true">
-        {% if attendee.twitter %}</a>{% endif %}
-      </li>
-    {% endfor %}
-    </ul>
-
-    <h3>... and more without avatar!</h3>
-    <ul>
-    {% for attendee in attendees_textual %}
-      <li>
-        {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}">{% endif %}
-        {{ attendee.name }} ({{ attendee.tagline }})
+        {% else %}
+        <div class="initials-avatar" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true">
+          {{ attendee.get_initials }}
+        </div>
+        {% endif %}
         {% if attendee.twitter %}</a>{% endif %}
       </li>
     {% endfor %}

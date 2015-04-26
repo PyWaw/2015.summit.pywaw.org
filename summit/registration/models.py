@@ -57,5 +57,8 @@ class Attendee(models.Model):
     def get_absolute_url(self):
         return reverse('attendee_detail', kwargs={'hash': self.hash})
 
+    def get_initials(self):
+        return ''.join(part[0] for part in self.name.split()).upper()
+
 
 pre_save.connect(set_avatar, sender=Attendee)

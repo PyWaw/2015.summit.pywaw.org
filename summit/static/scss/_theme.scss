@@ -1294,3 +1294,14 @@ Attendees list
 .newsletter-modal__content {
   @include grid-column(12);
 }
+
+.initials-avatar {
+  background-color: $orange-color;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 143px;
+  color: white;
+  font-size: rem-calc(80);
+}

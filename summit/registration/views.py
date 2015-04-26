@@ -39,18 +39,7 @@ class AttendeeDetailView(DetailView):
 
 class AttendeesListView(ListView):
     model = models.Attendee
-    context_object_name = 'attendees_with_avatar'
+    context_object_name = 'attendees'
 
     def get_queryset(self):
-        qs = super(AttendeesListView, self).get_queryset()
-        qs = qs.filter(display_on_website=True, is_paid=True).exclude(avatar='')
-        return qs
-
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs)
-        context_data['attendees_textual'] = models.Attendee.objects.filter(
-            display_on_website=True,
-            is_paid=True,
-            avatar='',
-        )
-        return context_data
+        return super(AttendeesListView, self).get_queryset().filter(display_on_website=True, is_paid=True)
