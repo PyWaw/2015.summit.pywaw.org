@@ -1269,7 +1269,7 @@ Attendees list
 .attendees__grid {
   @include block-grid(6);
   @media #{$small-only} {
-    @include block-grid(3);
+    @include block-grid(1);
   }
   @media #{$medium-only} {
     @include block-grid(4);
@@ -1303,5 +1303,5 @@ Attendees list
   vertical-align: middle;
   line-height: 143px;
   color: white;
-  font-size: rem-calc(80);
+  font-size: rem-calc(70);
 }

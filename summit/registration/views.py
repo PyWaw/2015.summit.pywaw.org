@@ -42,4 +42,4 @@ class AttendeesListView(ListView):
     context_object_name = 'attendees'
 
     def get_queryset(self):
-        return super(AttendeesListView, self).get_queryset().filter(display_on_website=True, is_paid=True)
+        return super(AttendeesListView, self).get_queryset().filter(display_on_website=True, is_paid=True).order_by('?')
