@@ -8,7 +8,7 @@
 {% block content %}
 <div class="attendees-container">
   <h2 class="attendees__title">Attendees</h2>
-  <p class="attendees__intro">Check out who is coming - you could still join them! Registration is still open - <a href="{% url 'attendee_create' %}">buy your ticket now</a>.</p>
+  <p class="attendees__intro">Check out who is coming - you could still join them! Registration is still open - <a href="{% url 'attendee_create' %}">buy your ticket now</a>. You can only see folks who agreed to be shown here.</p>
   <div class="attendees">
     <ul class="attendees__grid">
     {% for attendee in attendees %}
