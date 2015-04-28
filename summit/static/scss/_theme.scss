@@ -917,6 +917,7 @@ a {
 
 .sponsors {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .sponsors img {
@@ -940,7 +941,7 @@ a {
     @include grid-column(3, $offset: 2);
   }
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
   }
 }
 
@@ -949,7 +950,7 @@ a {
     @include grid-column(3, $offset: 2);
   }
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
     margin-bottom: rem-calc(50);
   }
 }
@@ -972,29 +973,44 @@ a {
 .sponsors__commiter__item {
   @include grid-column(3);
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
   }
 }
 
 .sponsors__commiter__item--offset {
   @include grid-column(3, $center: true); // center for now, later it will be offset
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
   }
 }
 
 .sponsors__supporter__item--offset {
-  @include grid-column(3, $offset: 2);
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 2);
+  }
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
+    margin-bottom: rem-calc(50);
+  }
+}
+
+.sponsors__supporter__item--divio {
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 2);
+    padding-top: 20px;
+  }
+  @media #{$small-only} {
+    @include grid-column($columns: 10, $center: true);
     margin-bottom: rem-calc(50);
   }
 }
 
 .sponsors__partner__item--offset {
-  @include grid-column(3, $offset: 2);
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 2);
+  }
   @media #{$small-only} {
-    @include grid-column($columns: 12, $center: true);
+    @include grid-column($columns: 10, $center: true);
     margin-bottom: rem-calc(50);
   }
 }
