@@ -917,7 +917,6 @@ a {
 
 .sponsors {
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .sponsors img {
@@ -934,6 +933,7 @@ a {
 
 .sponsors__core {
   @include grid-row;
+  text-align: center;
 }
 
 .sponsors__core__item {
@@ -957,16 +957,19 @@ a {
 
 .sponsors__commiter {
   @include grid-row;
+  text-align: center;
   margin-top: 30px;
 }
 
 .sponsors__supporter {
   @include grid-row;
+  text-align: center;
   margin-top: 30px;
 }
 
 .sponsors__partner {
   @include grid-row;
+  text-align: center;
   margin-top: 30px;
 }
 
