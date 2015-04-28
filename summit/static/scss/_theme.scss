@@ -919,6 +919,10 @@ a {
   margin-bottom: 50px;
 }
 
+.sponsors img {
+  max-height: 90px;
+}
+
 .sponsors__header {
   @include grid-column($columns: 12);
   @include title-font;
@@ -960,24 +964,38 @@ a {
   margin-top: 30px;
 }
 
+.sponsors__partner {
+  @include grid-row;
+  margin-top: 30px;
+}
+
 .sponsors__commiter__item {
   @include grid-column(3);
   @media #{$small-only} {
-    @include grid-column($columns: 12);
+    @include grid-column($columns: 12, $center: true);
   }
 }
 
 .sponsors__commiter__item--offset {
   @include grid-column(3, $center: true); // center for now, later it will be offset
   @media #{$small-only} {
-    @include grid-column($columns: 12);
+    @include grid-column($columns: 12, $center: true);
   }
 }
 
 .sponsors__supporter__item--offset {
-  @include grid-column(3, $center: true); // center for now, later it will be offset
+  @include grid-column(3, $offset: 2);
   @media #{$small-only} {
-    @include grid-column($columns: 12);
+    @include grid-column($columns: 12, $center: true);
+    margin-bottom: rem-calc(50);
+  }
+}
+
+.sponsors__partner__item--offset {
+  @include grid-column(3, $offset: 2);
+  @media #{$small-only} {
+    @include grid-column($columns: 12, $center: true);
+    margin-bottom: rem-calc(50);
   }
 }
 
