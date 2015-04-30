@@ -343,11 +343,11 @@
         </div>
       </div>
       <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})" data-reveal-id="tomasz-chodun-details"></div>
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Tomasz-Chodun.png' %})" data-reveal-id="tomasz-chodun-details"></div>
         <h3 class="speakers__name" data-reveal-id="tomasz-chodun-details">Tomasz Choduń</h3>
         <h4 class="speakers__tagline">Software Architect<br>at Webinterpret</h4>
         <div id="tomasz-chodun-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
-          <img class="speaker-modal__photo" src="{% static 'img/speakers/placeholder.png' %}">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Tomasz-Chodun.png' %}">
           <div class="speaker-modal__description">
             <h2 class="speaker-modal__name">Tomasz Choduń</h2>
             <h3 class="speaker-modal__tagline">Software Architect at Webinterpret</h3>
@@ -368,18 +368,36 @@
     </div>
     {# fifth row #}
     <div class="speakers__row">
-      <div class="speakers__item">
-        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/placeholder.png' %})" data-reveal-id="szymon-pyzalski-details"></div>
+      <div class="speakers__item--offset">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Szymon-Pyzalski.png' %})" data-reveal-id="szymon-pyzalski-details"></div>
         <h3 class="speakers__name" data-reveal-id="szymon-pyzalski-details">Szymon Pyżalski</h3>
         <h4 class="speakers__tagline">Software Engineer<br>at Allegro Group</h4>
         <div id="szymon-pyzalski-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
-          <img class="speaker-modal__photo" src="{% static 'img/speakers/placeholder.png' %}">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Szymon-Pyzalski.png' %}">
           <div class="speaker-modal__description">
             <h2 class="speaker-modal__name">Szymon Pyżalski</h2>
             <h3 class="speaker-modal__tagline">Software Engineer at Allegro Group</h3>
             <p>Born 1982. Programming for life since 2009. In python since 2011. Currently member of the ralph team in Allegro Group.</p>
             <h3 class="speaker-modal__talk-title">Talk: Queueing tasks with rq</h3>
             <p>Do you need a simple queueing system to communicate between various python processes? Then RQ might be a solution for you. I will show you how to set up your tasks in RQ and how to solve some common problems with this technology.</p>
+            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+          </div>
+        </div>
+      </div>
+      <div class="speakers__item">
+        <div class="speakers__photo" style="background-image: url({% static 'img/speakers/Marcin-Gozdalik.png' %})" data-reveal-id="marcin-gozdalik-details"></div>
+        <h3 class="speakers__name" data-reveal-id="marcin-gozdalik-details">Marcin Gozdalik</h3>
+        <h4 class="speakers__tagline">Team Leader<br/>Starfish Storage, 9livesdata</h4>
+        <div id="marcin-gozdalik-details" class="speaker-modal" data-reveal aria-hidden="true" role="dialog">
+          <img class="speaker-modal__photo" src="{% static 'img/speakers/Marcin-Gozdalik.png' %}">
+          <div class="speaker-modal__description">
+            <h2 class="speaker-modal__name">Marcin Gozdalik</h2>
+            <h3 class="speaker-modal__tagline">Team Leader<br/>Starfish Storage, 9livesdata</h3>
+            <p class="speaker-modal__twitter"><a href="https://twitter.com/gozdal" target="_blank"><img class="speaker-modal__twitter-icon" src="{% static 'img/icons/twitter-black.svg' %}"> @gozdal</a></p>
+            <p>Programmer, agile practitioner. Currently working on Python-based product to efficiently index collections of billions of files.</p>
+            <h3 class="speaker-modal__talk-title">Talk: Shipping Python to customers</h3>
+            <p>Shipping your Python-based product to your customers can be challenging, especially if you want the install process to be easy yet bullet-proof.</p>
+            <p>I'd like to review tools and methods you can use to package and deploy Python code at customers' premises, taking into account that they run on outdated systems, have no or limited Internet connectivity and the project sponsor may want obfuscate the source-code.</p>
             <a class="close-reveal-modal" aria-label="Close">&#215;</a>
           </div>
         </div>

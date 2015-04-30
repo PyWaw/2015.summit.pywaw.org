@@ -574,6 +574,13 @@ a {
   }
 }
 
+.speakers__item--offset {
+  @include grid-column(3, $offset: 3);
+  @media #{$small-only} {
+    @include grid-column($columns: 12);
+  }
+}
+
 .speaker-modal {
   @extend .reveal-modal;
 }
