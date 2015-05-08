@@ -1066,6 +1066,32 @@ a {
 
 /*
 
+  Speakers Guide
+
+*/
+
+.speakers-guide-container {
+  @include grid-row;
+}
+
+
+.speakers-guide {
+  margin-bottom: 50px;
+}
+
+.speakers-guide__text {
+  margin-left: 10px;
+}
+
+.speakers-guide__title {
+  @include section-title;
+
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+/*
+
   Accommodation
 
 */

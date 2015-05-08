@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles compress %}
+{% block content %}
+<div class="speakers-guide-container">
+  <div class="speakers-guide" id="coc">
+    <h2 class="speakers-guide__title">Speakers' Guide</h2>
+
+    <div class="speakers-guide__text">
+      <p>One of the main aims of our conference is to provide quality and valuable talks to all attendees. Below we prepared a checklist that helps you make sure that you are perfectly ready to rock on PyWaw Summit’s stage.</p>
+      <h3>The talk and slides tips</h3>
+      <ul>
+        <li><strong>Practice, practice, practice!</strong> That’s super important to tell your talk loudly at least a few times before the day of conference.</li>
+        <li>You have <strong>exactly 30 min slot for your talk</strong> including Q&A session (unless you're keynote speaker). If you exceed the limit we will have to terminate your presentation.</li>
+        <li><strong>Q&A session is optional.</strong> If you don’t want to have it just let us know.</li>
+        <li><strong>You will be warmly introduced</strong> just before your talk. If you want to control what we will say just let us know about it at least one day before the conference.</li>
+        <li>Make sure your <strong>aim of presentation is clear</strong> and highlighted at the beginning of your talk.</li>
+        <li>Ensure your <strong>slides are legible</strong> and the font size is not too small for the people sitting at the end of the hall.</li>
+        <li><strong>Avoid the wall of code</strong> in your slides. Except you have really good reason for that.</li>
+        <li>Don’t be stressed. All the people over there are really friendly with a good will to take the advantage of your talk!</li>
+        <li>However you should know that there will be about 250 people in the audience.</li>
+        <li>We will do our best to help you feel comfortable on the stage!</li>
+      </ul>
+      <h3>Technical facts</h3>
+      <ul>
+        <li>Projector’s resolution is 1366x768.</li>
+        <li>Projector has both VGA and HDMI ports.</li>
+        <li>Internet access is available through WiFi and Ethernet cable</li>
+        <li>There is an option to play video and music but please let us know about it at least 3 days before the conference.</li>
+        <li>There will be a microport used instead of regular microphone so your hands will be free to gesticulate.</li>
+      </ul>
+      <p>If you have any questions or custom requirements to run your talk please let us know at <a href="mailto:info@pywaw.org">info@pywaw.org</a>.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
