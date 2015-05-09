@@ -3,6 +3,13 @@
 {% block js %}
 {{ block.super }}
 <script src="{{ STATIC_URL }}bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+<script>
+  $(document).foundation({
+    tooltip: {
+      disable_for_touch: true
+    }
+  }
+</script>
 {% endblock %}
 
 {% block content %}
@@ -15,9 +22,9 @@
       <li>
         {% if attendee.twitter %}<a href="http://twitter.com/{{ attendee.twitter }}" target="_blank">{% endif %}
         {% if attendee.avatar %}
-        <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true" data-options="disable-for-touch: true" >
+        <img src="{{ attendee.avatar }}" alt="{{ attendee.name }} ({{ attendee.tagline }})" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true">
         {% else %}
-        <div class="initials-avatar" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true" data-options="disable-for-touch: true" >
+        <div class="initials-avatar" title="{{ attendee.name }} ({{ attendee.tagline }})" data-tooltip aria-haspopup="true">
           {{ attendee.get_initials }}
         </div>
         {% endif %}
