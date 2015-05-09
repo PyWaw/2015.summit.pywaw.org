@@ -1348,12 +1348,14 @@ Attendees list
 }
 
 .attendees__grid {
-  @include block-grid(6);
   @media #{$small-only} {
-    @include block-grid(1);
+    @include block-grid(2);
   }
   @media #{$medium-only} {
     @include block-grid(4);
+  }
+  @media #{$large-up} {
+    @include block-grid(6);
   }
 }
 
