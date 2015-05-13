@@ -998,7 +998,8 @@ a {
 
 .sponsors__supporter__item--offset {
   @media #{$medium-up} {
-    @include grid-column(3, $offset: 1);
+    @include grid-column(3, $offset: 2);
+    margin-bottom: rem-calc(30);
   }
   @media #{$small-only} {
     @include grid-column($columns: 10, $center: true);
@@ -1008,7 +1009,7 @@ a {
 
 .sponsors__supporter__item--divio {
   @media #{$medium-up} {
-    @include grid-column(3, $offset: 1);
+    @include grid-column(3, $offset: 2);
     padding-top: 20px;
   }
   @media #{$small-only} {
