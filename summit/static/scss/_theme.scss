@@ -576,7 +576,7 @@ a {
 
 .speakers__item--offset {
   @media #{$medium-up} {
-    @include grid-column(3, $offset: 3);
+    @include grid-column(3, $offset: 4.5);
   }
   @media #{$small-only} {
     @include grid-column($columns: 12);
