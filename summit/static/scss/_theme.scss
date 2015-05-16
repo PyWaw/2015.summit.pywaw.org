@@ -947,7 +947,7 @@ a {
 
 .sponsors__core__item {
   @media #{$medium-up} {
-    @include grid-column(3, $offset: 2);
+    @include grid-column(3, $offset: 1);
   }
   @media #{$small-only} {
     @include grid-column($columns: 10, $center: true);
@@ -956,7 +956,18 @@ a {
 
 .sponsors__core__item--offset {
   @media #{$medium-up} {
-    @include grid-column(3, $offset: 2);
+    @include grid-column(3, $offset: 1);
+  }
+  @media #{$small-only} {
+    @include grid-column($columns: 10, $center: true);
+    margin-bottom: rem-calc(50);
+  }
+}
+
+.sponsors__core__item--saucelabs {
+  @media #{$medium-up} {
+    @include grid-column(3, $offset: 1);
+    padding-top: 10px;
   }
   @media #{$small-only} {
     @include grid-column($columns: 10, $center: true);
