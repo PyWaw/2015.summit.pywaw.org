@@ -71,6 +71,8 @@ class AttendeeModelAdmin(admin.ModelAdmin):
 
     list_filter = (AttendeesTypesListFilter,)
 
+    search_fields = ('name', 'tagline', 'email', 'company_name', 'notes', 'admin_notes')
+
     def mark_as_paid(self, request, queryset):
         rows_updated = queryset.update(is_paid=True)
 
