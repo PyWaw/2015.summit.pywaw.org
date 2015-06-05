@@ -1409,3 +1409,12 @@ Attendees list
   color: white;
   font-size: rem-calc(70);
 }
+
+.slides {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url('/static/img/icons/slides.png') no-repeat bottom;
+  position: absolute;
+  margin-left: 10px;
+}
