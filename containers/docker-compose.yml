@@ -9,6 +9,7 @@ services:
     ports:
       - "8001:8000"
     environment:
+      - DEBUG=$DEBUG
       - DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
       - MANDRILL_API_KEY=$MANDRILL_API_KEY
       - DB_NAME=$DB_NAME
