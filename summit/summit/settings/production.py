@@ -1,6 +1,6 @@
 from .base import *
 
-DEBUG = True
+DEBUG = get_env_var('DEBUG') == 'true'
 
 TEMPLATE_DEBUG = DEBUG
 
