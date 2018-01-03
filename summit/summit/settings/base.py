@@ -71,13 +71,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/2015/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, '../../static')
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
@@ -93,8 +90,10 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+STATIC_ROOT = '/static'
+MEDIA_ROOT = '/media'
 
-SASS_BIN = os.path.abspath(os.path.join(BASE_DIR, 'static/node_modules/.bin/node-sass'))
+SASS_BIN = '/usr/local/bin/node-sass'
 
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', SASS_BIN + ' {infile} --stdout --include-path static/bower_components/'),
@@ -102,4 +101,3 @@ COMPRESS_PRECOMPILERS = (
 
 REGISTRATION_EMAIL = 'Registration <registration@pywaw.org>'
 REGISTRATION_NOTIFICATIONS_URL = None
-
